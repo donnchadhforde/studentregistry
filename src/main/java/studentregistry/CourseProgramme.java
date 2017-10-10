@@ -1,6 +1,7 @@
 package studentregistry;
 
-    import java.util.ArrayList;
+    import java.util.List;
+
     import org.joda.time.DateTime;
     import org.joda.time.format.DateTimeFormat;
     import org.joda.time.format.DateTimeFormatter;
@@ -8,11 +9,11 @@ package studentregistry;
 public class CourseProgramme {
 
     private String name;
-    private final ArrayList<Module> modules;
+    private final List<Module> modules;
     private DateTime startD;
     private DateTime endD;
 
-    public CourseProgramme(String name, ArrayList<Module> modules, String start, String end) {
+    public CourseProgramme(String name, List<Module> modules, String start, String end) {
         this.name = name;
         this.modules = modules;
         this.startD = stringToDate(start);

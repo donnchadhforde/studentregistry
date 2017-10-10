@@ -1,14 +1,14 @@
 package studentregistry;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Module {
 
     private String name;
     private String ID;
-    private final ArrayList<Student> students;
+    private final List<Student> students;
 
-    public Module(String name, String ID, ArrayList<Student> students ) {
+    public Module(String name, String ID, List<Student> students ) {
         this.name = name;
         this.ID = ID;
         this.students = students;
