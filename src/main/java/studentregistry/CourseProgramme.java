@@ -9,7 +9,8 @@ package studentregistry;
 public class CourseProgramme {
 
     private String name;
-    private final List<Module> modules;
+    private List<Module> modules;
+    private List<Student> students;
     private DateTime startD;
     private DateTime endD;
 
@@ -29,6 +30,10 @@ public class CourseProgramme {
 
     public String getName() { return this.name; }
 
+    public void setModules(List<Module> modules) {this.modules = modules; }
+
+    public List<Module> getModules() { return this.modules; }
+
     public void setStartDate(String start) {
         this.startD = stringToDate(start);
     }
@@ -47,6 +52,10 @@ public class CourseProgramme {
         return fmt.print(this.endD);
     }
 
-    public void addModule(Module m) { this.modules.add(m); }
+    public void setStudents(List<Student> students) { this.students = students; }
+
+    public List<Student> getStudents() { return this.students; }
+
+
 
 }

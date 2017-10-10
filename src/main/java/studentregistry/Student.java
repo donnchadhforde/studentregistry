@@ -5,13 +5,19 @@ import org.joda.time.Years;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Student {
 
     private String name;
     private String dob;
-    private int age = 0;
-    private int ID = 0;
+    private int age;
+    private int ID;
     private String username;
+
+    private List<Module> modules = new ArrayList<Module>();
+    private CourseProgramme course;
 
     public Student(String name, String dob, int ID) {
         this.name = name;
@@ -51,5 +57,13 @@ public class Student {
     public String getUsername() {
         return this.name + getAge();
     }
+
+    public void setModules(List<Module> modules) { this.modules = modules; }
+
+    public List<Module> getModules() { return this.modules; }
+
+    public void setCourse(CourseProgramme c) { this.course = c; }
+
+    public CourseProgramme getCourse() { return this.course; }
 
 }

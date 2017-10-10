@@ -1,14 +1,21 @@
-import studentregistry.CourseProgramme;
-import studentregistry.Module;
+import junit.framework.TestCase;
 import studentregistry.Student;
 
-import java.util.ArrayList;
+public class Test extends TestCase{
 
-public class Test {
+    Student s1;
 
-    public static void main (String[] args) {
+    public void setUp() {
 
-
+        s1 = new Student("Paul", "16/06/1995", 16458);
 
     }
+
+    public void getUsernameTest() {
+
+        String trueUsername = "Paul22";
+        String username = s1.getUsername();
+        assertTrue(username.equals(trueUsername));
+    }
+
 }

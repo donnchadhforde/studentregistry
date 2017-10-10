@@ -6,7 +6,8 @@ public class Module {
 
     private String name;
     private String ID;
-    private final List<Student> students;
+    private List<Student> students;
+    private List<CourseProgramme> courses;
 
     public Module(String name, String ID, List<Student> students ) {
         this.name = name;
@@ -30,6 +31,14 @@ public class Module {
         return this.ID;
     }
 
+    public void setStudents(List<Student> students) { this.students = students; }
+
+    public List<Student> getStudents() { return this.students; }
+
     public void addStudent(Student s) { this.students.add(s); }
+
+    public void setCourses(List<CourseProgramme> courses) { this.courses = courses; }
+
+    public List<CourseProgramme> getCourses() { return this.courses; }
 
 }
