@@ -1,5 +1,6 @@
 package studentregistry;
 
+    import java.util.ArrayList;
     import java.util.List;
 
     import org.joda.time.DateTime;
@@ -10,7 +11,7 @@ public class CourseProgramme {
 
     private String name;
     private List<Module> modules;
-    private List<Student> students;
+    private List<Student> students = new ArrayList<Student>();
     private DateTime startD;
     private DateTime endD;
 
@@ -19,6 +20,19 @@ public class CourseProgramme {
         this.modules = modules;
         this.startD = stringToDate(start);
         this.endD = stringToDate(end);
+
+        for (Module m: modules) {
+            m.addCourse(this);
+
+            for (Student s: m.getStudents()) {
+
+                if (s.getCourse() == null) {
+
+                    s.setCourse(this);
+                    this.students.add(s);
+                }
+            }
+        }
     }
 
     private DateTime stringToDate(String dateTime) {

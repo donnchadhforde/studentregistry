@@ -62,6 +62,8 @@ public class Student {
 
     public List<Module> getModules() { return this.modules; }
 
+    public void addModule(Module module) { this.modules.add(module); }
+
     public void setCourse(CourseProgramme c) { this.course = c; }
 
     public CourseProgramme getCourse() { return this.course; }
