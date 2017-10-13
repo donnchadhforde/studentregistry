@@ -28,8 +28,10 @@ public class CourseProgramme {
 
                 if (s.getCourse() == null) {
 
-                    s.setCourse(this);
-                    this.students.add(s);
+                    if (modules.equals(s.getModules())) {
+                        s.setCourse(this);
+                        addStudent(s);
+                    }
                 }
             }
         }
@@ -70,6 +72,6 @@ public class CourseProgramme {
 
     public List<Student> getStudents() { return this.students; }
 
-
+    public void addStudent(Student s) { this.students.add(s); }
 
 }
